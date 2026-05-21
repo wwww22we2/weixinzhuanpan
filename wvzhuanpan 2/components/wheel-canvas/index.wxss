@@ -1,0 +1,14 @@
+/* 固定尺寸：避免 height:100% 在自定义组件内塌陷为 0，导致 Canvas 不显示 */
+.wheel-wrap {
+  position: relative;
+  width: 600rpx;
+  height: 600rpx;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.wheel-canvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+}

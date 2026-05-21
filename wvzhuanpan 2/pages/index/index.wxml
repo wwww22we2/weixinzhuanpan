@@ -1,0 +1,84 @@
+<view class="page">
+  <view
+    class="custom-nav"
+    style="padding-top: {{statusBarHeight}}px; height: {{navTotalHeight}}px;"
+  >
+    <view class="custom-nav-inner" style="height: {{navBarHeight}}px;">
+      <text class="custom-nav-title">{{copy.navTitle}}</text>
+    </view>
+  </view>
+
+  <view class="hero">
+    <text class="slogan">{{copy.heroSubtitle}}</text>
+  </view>
+
+  <view class="card-list">
+    <navigator
+      url="/pages/custom-wheel/custom-wheel"
+      class="entry-card"
+      hover-class="entry-hover"
+    >
+      <image class="entry-icon-img" src="{{icons.custom}}" mode="aspectFit" />
+      <view class="entry-body">
+        <text class="entry-title">{{copy.cardCustomTitle}}</text>
+        <text class="entry-desc">{{copy.cardCustomDesc}}</text>
+      </view>
+      <view class="entry-btn entry-btn-purple">
+        <text class="entry-btn-text">进入转盘</text>
+      </view>
+    </navigator>
+
+    <navigator
+      url="/pages/food-wheel/food-wheel"
+      class="entry-card"
+      hover-class="entry-hover"
+    >
+      <image class="entry-icon-img" src="{{icons.food}}" mode="aspectFit" />
+      <view class="entry-body">
+        <text class="entry-title">{{copy.cardFoodTitle}}</text>
+        <text class="entry-desc">{{copy.cardFoodDesc}}</text>
+      </view>
+      <view class="entry-btn entry-btn-orange">
+        <text class="entry-btn-text">进入转盘</text>
+      </view>
+    </navigator>
+
+    <navigator
+      url="/pages/couple-heat/couple-heat"
+      class="entry-card"
+      hover-class="entry-hover"
+    >
+      <image class="entry-icon-img" src="{{icons.couple}}" mode="aspectFit" />
+      <view class="entry-body">
+        <text class="entry-title">{{copy.cardCoupleTitle}}</text>
+        <text class="entry-desc">{{copy.cardCoupleDesc}}</text>
+      </view>
+      <view class="entry-btn entry-btn-rose">
+        <text class="entry-btn-text">进入互动</text>
+      </view>
+    </navigator>
+
+    <navigator
+      url="/pages/drink-wheel/drink-wheel"
+      class="entry-card"
+      hover-class="entry-hover"
+    >
+      <image class="entry-icon-img" src="{{icons.drink}}" mode="aspectFit" />
+      <view class="entry-body">
+        <text class="entry-title">{{copy.cardDrinkTitle}}</text>
+        <text class="entry-desc">{{copy.cardDrinkDesc}}</text>
+      </view>
+      <view class="entry-btn entry-btn-amber">
+        <text class="entry-btn-text">去转一下</text>
+      </view>
+    </navigator>
+  </view>
+
+  <view class="footer-spacer" />
+
+  <view class="footer safe-bottom">
+    <navigator url="/pages/history/history" class="footer-pill" hover-class="footer-pill-hover">{{copy.linkHistory}}</navigator>
+    <navigator url="/pages/settings/settings" class="footer-pill" hover-class="footer-pill-hover">{{copy.linkSettings}}</navigator>
+    <navigator url="/pages/about/about" class="footer-pill" hover-class="footer-pill-hover">{{copy.linkAbout}}</navigator>
+  </view>
+</view>

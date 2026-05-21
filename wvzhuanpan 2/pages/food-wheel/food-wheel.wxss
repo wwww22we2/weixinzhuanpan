@@ -1,0 +1,51 @@
+.page {
+  padding: 16rpx 0 48rpx;
+}
+
+.page-hide {
+  opacity: 0;
+}
+
+.page-show {
+  opacity: 1;
+  transition: opacity 0.12s ease-out;
+}
+
+.tabs {
+  white-space: nowrap;
+  padding: 8rpx 24rpx 24rpx;
+  box-sizing: border-box;
+}
+
+.tab {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12rpx 28rpx;
+  margin-right: 16rpx;
+  border-radius: 999rpx;
+  font-size: 26rpx;
+  background: #eeeef5;
+  color: #555;
+}
+
+.tab.on {
+  background: linear-gradient(135deg, #ff9f43, #ff6b6b);
+  color: #fff;
+  font-weight: 600;
+}
+
+.wheel-box {
+  text-align: center;
+  padding: 0 24rpx;
+  min-height: 620rpx;
+}
+
+.spin-btn {
+  margin-top: 28rpx;
+  width: 420rpx;
+  border-radius: 999rpx;
+  background: linear-gradient(135deg, #ff9f43, #ff6b6b);
+  color: #fff;
+  font-weight: 600;
+}

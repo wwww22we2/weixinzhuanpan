@@ -1,0 +1,19 @@
+<view class="page {{contentReady ? 'page-show' : 'page-hide'}}">
+  <view class="hero">
+    <text class="hero-title">喝酒转盘</text>
+    <text class="hero-desc">转一下，今晚喝法交给随机安排。</text>
+  </view>
+
+  <view class="wheel-box">
+    <wheel-canvas
+      id="wheel"
+      options="{{options}}"
+      colors="{{colors}}"
+      rotation="{{rotation}}"
+      highlighted="{{highlighted}}"
+    />
+    <button class="spin-btn" disabled="{{spinning}}" bindtap="onSpin">
+      {{spinning ? '转动中…' : '今晚谁来喝'}}
+    </button>
+  </view>
+</view>

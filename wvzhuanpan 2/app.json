@@ -1,0 +1,23 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/custom-wheel/custom-wheel",
+    "pages/food-wheel/food-wheel",
+    "pages/couple-heat/couple-heat",
+    "pages/drink-wheel/drink-wheel",
+    "pages/couple-board/couple-board",
+    "pages/history/history",
+    "pages/settings/settings",
+    "pages/about/about"
+  ],
+  "window": {
+    "navigationBarTitleText": "恋爱升温转盘",
+    "navigationBarBackgroundColor": "#F7F5FF",
+    "navigationBarTextStyle": "black",
+    "backgroundColor": "#d1a0ff",
+    "pageAnimation": false
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "lazyCodeLoading": "requiredComponents"
+}

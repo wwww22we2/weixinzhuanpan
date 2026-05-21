@@ -1,0 +1,8 @@
+<view class="wheel-wrap">
+  <canvas
+    type="2d"
+    id="wheelCanvas"
+    class="wheel-canvas"
+    style="width: {{pxSize}}px; height: {{pxSize}}px;"
+  />
+</view>

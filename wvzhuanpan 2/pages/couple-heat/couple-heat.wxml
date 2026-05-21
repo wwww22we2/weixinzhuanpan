@@ -1,0 +1,22 @@
+<view class="page">
+  <view class="level-list">
+    <navigator
+      wx:for="{{levels}}"
+      wx:key="key"
+      url="/pages/couple-board/couple-board?level={{item.key}}"
+      class="level-card card"
+      style="background: {{item.cardGradient}};"
+      hover-class="level-card-hover"
+    >
+      <view class="level-top">
+        <text class="level-title">{{item.name}}</text>
+        <view class="level-enter" style="background: {{item.buttonGradient}};">进入</view>
+      </view>
+      <text class="level-desc">{{item.desc}}</text>
+      <view class="level-foot">
+        <text class="level-foot-text">40 个互动任务</text>
+        <text class="level-foot-text">适合双人面对面进行</text>
+      </view>
+    </navigator>
+  </view>
+</view>

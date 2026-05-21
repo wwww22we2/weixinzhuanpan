@@ -1,0 +1,21 @@
+<view class="page">
+  <view class="card">
+    <view class="row">
+      <text class="label">转动音效</text>
+      <switch checked="{{soundOn}}" bindchange="onSound" color="#6c5ce7" />
+    </view>
+    <view class="hint">使用本地短音效</view>
+  </view>
+
+  <view class="card">
+    <view class="row">
+      <text class="label">转动震动</text>
+      <switch checked="{{vibrateOn}}" bindchange="onVibrate" color="#6c5ce7" />
+    </view>
+    <view class="hint">轻触反馈</view>
+  </view>
+
+  <view class="note">
+    数据仅保存在本机，不联网、无需登录。
+  </view>
+</view>

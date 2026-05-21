@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "喝酒转盘",
+  "usingComponents": {
+    "wheel-canvas": "/components/wheel-canvas/index"
+  }
+}

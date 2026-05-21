@@ -1,0 +1,26 @@
+<view class="page {{contentReady ? 'page-show' : 'page-hide'}}">
+  <scroll-view class="tabs" scroll-x>
+    <view
+      wx:for="{{cuisines}}"
+      wx:key="id"
+      class="tab {{activeId === item.id ? 'on' : ''}}"
+      data-id="{{item.id}}"
+      bindtap="onTab"
+    >
+      {{item.name}}
+    </view>
+  </scroll-view>
+
+  <view class="wheel-box">
+    <wheel-canvas
+      id="wheel"
+      options="{{dishes}}"
+      colors="{{colors}}"
+      rotation="{{rotation}}"
+      highlighted="{{highlighted}}"
+    />
+    <button class="spin-btn" disabled="{{spinning}}" bindtap="onSpin">
+      {{spinning ? '转动中…' : '今日吃什么'}}
+    </button>
+  </view>
+</view>

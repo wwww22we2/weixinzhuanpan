@@ -1,0 +1,57 @@
+.page {
+  padding: 24rpx 32rpx 48rpx;
+}
+
+.toolbar {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 16rpx;
+}
+
+.clear {
+  color: #999 !important;
+  background: transparent !important;
+}
+
+.empty {
+  text-align: center;
+  color: #999;
+  padding: 120rpx 0;
+  font-size: 28rpx;
+}
+
+.item {
+  padding: 24rpx;
+  margin-bottom: 20rpx;
+  background: #fff;
+  border-radius: 20rpx;
+  box-shadow: 0 8rpx 28rpx rgba(0, 0, 0, 0.06);
+}
+
+.time {
+  font-size: 22rpx;
+  color: #999;
+  margin-bottom: 12rpx;
+}
+
+.body {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12rpx;
+}
+
+.tag {
+  font-size: 22rpx;
+  padding: 4rpx 12rpx;
+  border-radius: 8rpx;
+  background: #f3f1ff;
+  color: #6c5ce7;
+}
+
+.res {
+  font-size: 28rpx;
+  color: #333;
+  flex: 1;
+  word-break: break-all;
+}

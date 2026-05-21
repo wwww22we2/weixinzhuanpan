@@ -1,0 +1,65 @@
+<view class="page">
+  <view class="board card">
+    <view class="board-head">
+      <text class="board-title">{{levelName}}</text>
+      <navigator class="board-link" url="/pages/couple-heat/couple-heat">切换分级</navigator>
+    </view>
+    <text class="board-desc">{{levelDesc}}</text>
+    <view class="board-meta">
+      <text class="board-sub">互动棋盘</text>
+      <text class="board-sub">点击格子可预览任务</text>
+    </view>
+    <view class="board-stage">
+      <view class="stage-chip stage-chip-start">START</view>
+      <view class="stage-chip stage-chip-end">FINISH</view>
+    </view>
+    <view class="board-grid">
+      <view
+        wx:for="{{boardCells}}"
+        wx:key="step"
+        class="cell cell-{{item.state}} cell-{{item.tone}}"
+        data-step="{{item.step}}"
+        bindtap="onPreviewTask"
+      >
+        <view class="cell-node">
+          <view class="cell-piece" wx:if="{{item.state === 'current'}}">♥</view>
+          <text class="cell-badge" wx:if="{{item.isStart}}">起点</text>
+          <text class="cell-badge" wx:elif="{{item.isFinish}}">终点</text>
+          <text class="cell-step">{{item.step}}</text>
+          <text class="cell-text">{{item.state === 'current' ? 'NOW' : item.state === 'passed' ? 'DONE' : 'TASK'}}</text>
+        </view>
+        <view
+          wx:if="{{item.connector !== 'none'}}"
+          class="cell-connector connector-{{item.connector}}"
+        >
+          <text class="connector-arrow">{{item.connector === 'down' ? '↓' : item.connector === 'left' ? '←' : '→'}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class="actions card">
+    <view class="dice-zone">
+      <view class="dice-shell {{rolling ? 'dice-shell-rolling' : ''}}">
+        <view class="dice-face">
+          <view
+            wx:for="{{diceDots}}"
+            wx:key="*this"
+            class="dice-dot {{item}}"
+          />
+        </view>
+      </view>
+      <view class="dice-info">
+        <text class="dice-title">{{rolling ? '骰子转动中…' : '点击按钮摇骰子'}}</text>
+        <text class="dice-sub">{{lastDice ? '本次点数 ' + lastDice : '摇出 1 - 6 点，角色前进对应步数'}}</text>
+      </view>
+    </view>
+    <view class="action-row">
+      <button class="btn-primary action-btn action-btn-half" disabled="{{rolling || reachedEnd}}" bindtap="onRoll">
+        {{rolling ? '摇骰子中…' : reachedEnd ? '已到终点' : '摇骰子'}}
+      </button>
+      <button class="btn-ghost action-btn action-btn-half" bindtap="onReset">重置棋盘</button>
+    </view>
+    <text class="action-tip" wx:if="{{reachedEnd}}">已走到第 40 格，可以重置后重新开始。</text>
+  </view>
+</view>

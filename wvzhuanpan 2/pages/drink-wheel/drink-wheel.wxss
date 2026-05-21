@@ -1,0 +1,47 @@
+.page {
+  padding: 16rpx 0 48rpx;
+}
+
+.page-hide {
+  opacity: 0;
+}
+
+.page-show {
+  opacity: 1;
+  transition: opacity 0.12s ease-out;
+}
+
+.hero {
+  padding: 4rpx 24rpx 24rpx;
+  text-align: center;
+}
+
+.hero-title {
+  display: block;
+  font-size: 40rpx;
+  font-weight: 700;
+  color: #7a2f14;
+}
+
+.hero-desc {
+  display: block;
+  margin-top: 10rpx;
+  font-size: 26rpx;
+  line-height: 1.5;
+  color: #a66a4c;
+}
+
+.wheel-box {
+  text-align: center;
+  padding: 0 24rpx;
+  min-height: 620rpx;
+}
+
+.spin-btn {
+  margin-top: 28rpx;
+  width: 420rpx;
+  border-radius: 999rpx;
+  background: linear-gradient(135deg, #ffb15a, #ff6a3d);
+  color: #fff;
+  font-weight: 600;
+}
